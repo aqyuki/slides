@@ -4,6 +4,7 @@ const config = {
   output: './dist',
   themeSet: './themes',
   pdf: true,
+  lang: 'ja',
 }
 
 export default config
