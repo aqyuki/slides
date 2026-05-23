@@ -1,0 +1,16 @@
+{
+  "name": "slides",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "marp --server --watch",
+    "build": "marp",
+    "lint": "prettier --check ./",
+    "fix": "prettier --write ./"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "4.4.0",
+    "lefthook": "2.1.8",
+    "prettier": "3.8.3"
+  }
+}

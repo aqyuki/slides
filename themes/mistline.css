@@ -1,0 +1,203 @@
+/* @theme mistline */
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght,MONO@300..800,1&family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@100..800&family=Sawarabi+Gothic&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+
+/* --------------------------------
+ * Theme variables
+ * -------------------------------- */
+
+/* Colors */
+:root {
+  --mistline-bg: oklch(0.98 0.01 240);
+  --mistline-surface: oklch(0.96 0.02 240);
+  --mistline-border: oklch(0.9 0.015 240);
+  --mistline-text-secondary: oklch(0.45 0.03 240);
+  --mistline-text-primary: oklch(0.28 0.03 240);
+  --mistline-muted: oklch(0.92 0.015 240);
+  --mistline-code-bg: oklch(0.94 0.02 240);
+  --mistline-focus-ring: oklch(0.78 0.1 240);
+
+  --mistline-primary: oklch(0.7 0.15 240);
+  --mistline-primary-hover: oklch(0.66 0.15 240);
+  --mistline-primary-soft: oklch(0.92 0.04 240);
+
+  --mistline-accent: oklch(0.74 0.09 205);
+}
+
+/* Font sizes */
+:root {
+  --mistline-font-size-silide-title: 2rem;
+  --mistline-font-size-section-title: 1.75rem;
+  --mistline-font-size-header: 1.5rem;
+  --mistline-font-size-body: 1rem;
+  --mistline-font-code: 0.75rem;
+}
+
+/* --------------------------------
+ * Base
+ * -------------------------------- */
+
+section {
+  font-family: Inter, 'Zen Kaku Gothic New', sans-serif;
+  --fontStack-monospace: 'JetBrains Mono', monospace;
+
+  font-size: 24px;
+  background-color: var(--mistline-bg);
+  border-radius: 0.8rem;
+}
+
+section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+
+  font-size: 1.2rem;
+  color: var(--mistline-muted);
+}
+
+section > header,
+section > footer {
+  font-size: 0.8rem;
+  color: var(--mistline-muted);
+}
+
+/* --------------------------------
+ * Headings
+ * -------------------------------- */
+
+h1,
+h2,
+h3 {
+  font-family: 'Sawarabi Gothic', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: var(--mistline-primary);
+}
+
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: var(--mistline-text-primary);
+}
+
+h1 {
+  font-size: var(--mistline-font-size-silide-title);
+}
+
+h2 {
+  font-size: var(--mistline-font-size-section-title);
+}
+
+h3 {
+  font-size: var(--mistline-font-size-header);
+}
+
+/* --------------------------------
+ * Text
+ * -------------------------------- */
+
+p,
+ul,
+ol {
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+}
+
+p {
+  color: var(--mistline-text-primary);
+  font-size: var(--mistline-font-size-body);
+}
+
+a {
+  color: var(--mistline-text-secondary);
+  text-decoration: underline;
+}
+
+strong {
+  color: var(--mistline-primary);
+  font-weight: 700;
+}
+
+s {
+  opacity: 0.7;
+}
+
+/* --------------------------------
+ * Lists
+ * -------------------------------- */
+
+li {
+  font-size: var(--mistline-font-size-body);
+  color: var(--mistline-text-primary);
+}
+
+li + li,
+li > ul {
+  margin-top: 0.4rem;
+}
+
+li::marker {
+  color: var(--mistline-text-primary);
+}
+
+/* --------------------------------
+ * Code
+ * -------------------------------- */
+
+pre,
+code {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  background-color: var(--mistline-code-bg);
+}
+
+code {
+  font-family: 'Google Sans Code', monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'MONO' 1;
+
+  font-size: var(--mistline-font-code);
+  line-height: 1.5;
+
+  border: 1px solid var(--mistline-border);
+  border-radius: 0.5rem;
+}
+
+/* --------------------------------
+ * Quote
+ * -------------------------------- */
+
+blockquote {
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+
+  p {
+    color: var(--mistline-text-secondary);
+  }
+}
+
+/* --------------------------------
+ * Media
+ * -------------------------------- */
+
+img {
+  background: none !important;
+}
+
+/* --------------------------------
+ * Utils
+ * -------------------------------- */
+
+.col2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.col3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
